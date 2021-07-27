@@ -10,10 +10,8 @@ FROM golang:latest
 
 WORKDIR /workdir
 
-COPY --from=builder /workdir/http-sample .
-COPY --from=builder /workdir/data.db .
+COPY --from=builder /workdir/http-go-mux .
 
 COPY entrypoint.sh .
-
 
 ENTRYPOINT /workdir/entrypoint.sh

@@ -4,12 +4,13 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	"http-sample/pkg/sqllite"
-	"http-sample/pkg/user"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/jijosg/http-go-mux/pkg/sqllite"
+	"github.com/jijosg/http-go-mux/pkg/user"
 
 	"github.com/gorilla/mux"
 
@@ -36,15 +37,6 @@ func main() {
 	}).Methods("GET")
 
 	r.HandleFunc("/insert", func(w http.ResponseWriter, r *http.Request) {
-		// log.Println("Inserting data to user table")
-		// name := r.URL.Query().Get("name")
-		// err := sqllite.InsertRow(conn, name, DB_FILENAME)
-		// if err != nil {
-		// 	log.Fatalln(err.Error())
-		// }
-		// log.Printf("Inserted row for %s\n", name)
-		// fmt.Fprintf(w, "Inserted row for "+name)
-
 		body, err := ioutil.ReadAll(r.Body)
 		if err != nil {
 			panic(err.Error())

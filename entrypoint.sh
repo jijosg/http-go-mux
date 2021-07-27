@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd workdir
-./http-sample
+./http-go-mux
