@@ -11,17 +11,17 @@ A sample api using go and mux, utilizes SQLLite for storage
 ### Perform CRUD on API
 Creates User table 
 ```
-  ~ ❯ curl localhost:8000/create
+> curl localhost:8000/create
 Created table user
 ```
 Insert Data into User table 
 ```
-  ~ ❯ curl -X POST -d '{"name" : "John"}' localhost:8000/insert
+> curl -X POST -d '{"name" : "John"}' localhost:8000/insert
 Inserted row for John
 ```
 List Data from User table 
 ```
-  ~ ❯ curl -X GET localhost:8000/list
+> curl -X GET localhost:8000/list
 [
  {
   "id": 1,
@@ -32,6 +32,6 @@ List Data from User table
 
 Delete Data from User table
 ```
-  ~ ❯ curl -X DELETE localhost:8000/delete/1
+> curl -X DELETE localhost:8000/delete/1
 Deleted row for 1
 ```
