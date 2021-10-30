@@ -1,6 +1,7 @@
-# http-go-mux
+# http-go-mux [![Go](https://github.com/jijosg/http-go-mux/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/jijosg/http-go-mux/actions/workflows/go.yml)
 
-A sample api using go and mux, utilizes SQLLite for storage
+A sample REST api using go and mux. It utilizes SQLLite for database storage.
+Also intends to publish the executable as a release using GitHub actions.
 
 ## Build using Docker
 
